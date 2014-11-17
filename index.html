@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html ng-app>
-	<meta charset="utf-8">
+<html ng-app="miApp">
+<head>
+	<meta charset="UTF-8">
 	<title> AngularJS </title>
+	
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
 
-<body>
-	<h1> Clase n° 01 </h1>
 	
-	<div>
- 	<label> Escribe tu: 
- 		<input type="text" ng-model="nom" placeholder="Nombre"> y
-		<input type="text" ng-model="color" placeholder="Color que gustes">
- 		</label>
- 	</div>
- 	
- 	<label class="text-{{color}}"> Hola {{nom}} {{cambia}}!!  </label>
- 	<button ng-click="cambia=' - Disfruta el curso'"> Presiona </button>
- 	
- 	
 
+</head>
+<body ng-controller="MainCtrl">
+	<h1> Clase n° 02 </h1>
+
+	<div>
+ 	<label> Escribe el: 
+		<input type="text" ng-model="color" placeholder="Color que gustes">
+ 	</label>
+ 	</div>
+	
+	<label class="text-{{color}}"> {{alum.nombre}} estudia {{alum.escuela}}!!  </label>
+	
 </body>
 </html>
